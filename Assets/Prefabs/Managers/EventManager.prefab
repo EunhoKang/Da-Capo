@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3028742387583680026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7335132812073989602}
+  - component: {fileID: 257286561309837701}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7335132812073989602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028742387583680026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257286561309837701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028742387583680026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0270a4d5cafb0094fbebcc74f6dcdc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventPos1: []
+  eventPos2: []
+  eventSprite:
+  - {fileID: 21300000, guid: 4af6dd0ca566d7f47b1afe80af4ed817, type: 3}
+  - {fileID: 21300000, guid: ed4133a4b3982234c98232d78fbe7abd, type: 3}
+  - {fileID: 21300000, guid: 8b8e06251f2bcab4690932137de85488, type: 3}
+  - {fileID: 21300000, guid: eb1faae4fd647d5448bb3084d52a6ed8, type: 3}
+  - {fileID: 21300000, guid: 31c24685dea4d8748b3a6cc538957a42, type: 3}
+  - {fileID: 21300000, guid: c1c1905de51996d458c8e59c98928774, type: 3}
+  - {fileID: 21300000, guid: 3de7cdef0b3f26b4390752610d703691, type: 3}
+  - {fileID: 21300000, guid: db25e9ad8f9d8094ba8d5373b567d22e, type: 3}
+  - {fileID: 21300000, guid: 245198af933ac8742a6f794a9153e764, type: 3}
+  - {fileID: 21300000, guid: d756e081e6d73bb49bec44eebd301d74, type: 3}
+  centerText: {fileID: 0}
+  rate: 0
+  eventTime: 2

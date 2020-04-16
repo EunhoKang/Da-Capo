@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5126405570554369472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3130506553824836404}
+  - component: {fileID: 406697074253952463}
+  m_Layer: 0
+  m_Name: EK-07 - Midnight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3130506553824836404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126405570554369472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406697074253952463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126405570554369472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2e2df43c8d5024e8337b93b1ff3c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNum: 6
+  songFile: {fileID: 8300000, guid: 3472905dc1b370640a5243062e1b08e2, type: 3}
+  BPM: 128
+  runTime: 227
+  metronomeRate: 0.0625
+  offset: 0.05
+  backgroundIllust: {fileID: 21300000, guid: 31f687f71ce04f7459cedbd9c85e5483, type: 3}
+  noteFile: {fileID: 4900000, guid: 38aaa0bba1706e54da5a53a66c42478e, type: 3}
+  lyrics: {fileID: 4900000, guid: 392ad934f64aa6f41b00a36a6598ed23, type: 3}
+  initPos: {x: -6, y: -3, z: 0}
+  dashLength: 5
+  playerHealth: 100
+  enemyBulletSpeed: 5
+  bulletDamage: 3
+  enemyLazerDuration: 0.5
+  lazerDamage: 6
+  fixTime: 0.0625
+  wallDamage: 12
+  obstacleDamage: 6
+  bulletTypePrefab: {fileID: 8209520190206353509, guid: e001fdb193395c84cbec0086ba44a6a5,
+    type: 3}
+  lazerTypePrefab: {fileID: 7479244586190190294, guid: 80b1c365c0deddc408cafa470d84fa6f,
+    type: 3}
+  bulletPrefab: {fileID: 3613694990891988726, guid: f4202492beb96984393c5d0b207fef32,
+    type: 3}
+  usingObstacle:
+  - {fileID: 5228032732328438283, guid: d77836db6ebaf3b4899c0baa163205be, type: 3}

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Note
+  - playerType
+  - enemyBullet
+  - Player
+  - Wall
+  - Enemy
+  - POW
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3776970739
+    locked: 0
+  - name: Grid
+    uniqueID: 4221696285
+    locked: 0
+  - name: Lyrics
+    uniqueID: 2513306747
+    locked: 0
+  - name: Effect
+    uniqueID: 900602483
+    locked: 0
+  - name: Line
+    uniqueID: 1242101185
+    locked: 0
+  - name: Note
+    uniqueID: 2391167369
+    locked: 0
+  - name: Obstacle
+    uniqueID: 2091830177
+    locked: 0
+  - name: Bullet
+    uniqueID: 2698392713
+    locked: 0
+  - name: Warn
+    uniqueID: 3776344757
+    locked: 0
+  - name: Unit
+    uniqueID: 1165471973
+    locked: 0
+  - name: Player
+    uniqueID: 3928919031
+    locked: 0
+  - name: PlayerEffect
+    uniqueID: 25013221
+    locked: 0
+  - name: Prologue
+    uniqueID: 2714744059
+    locked: 0
