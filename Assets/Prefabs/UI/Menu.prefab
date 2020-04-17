@@ -1695,17 +1695,17 @@ MonoBehaviour:
   - EK-07 - Cotton Candy
   - Leo - Yet
   bgs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 0ff850de2b6076f4fb59de0eb138f40e, type: 3}
+  - {fileID: 21300000, guid: 99f153b74129a3741aaa6f2c6877f572, type: 3}
+  - {fileID: 21300000, guid: 0ff850de2b6076f4fb59de0eb138f40e, type: 3}
+  - {fileID: 21300000, guid: 99f153b74129a3741aaa6f2c6877f572, type: 3}
+  - {fileID: 21300000, guid: e4087c93f4b734241b98038bb2c64161, type: 3}
+  - {fileID: 21300000, guid: f43fdcea590f9ca40a8fe64c202cbdb3, type: 3}
+  - {fileID: 21300000, guid: 1d5c6dc835cecfb4582c1cf2b5bd288e, type: 3}
+  - {fileID: 21300000, guid: d185767704570da49bc917dcd523b05e, type: 3}
+  - {fileID: 21300000, guid: 0b5032939e3f68846a79a8813ea43cfe, type: 3}
+  - {fileID: 21300000, guid: 0ff850de2b6076f4fb59de0eb138f40e, type: 3}
+  - {fileID: 21300000, guid: 881d2625714150547b5cb3efa4fe72a6, type: 3}
   clips:
   - {fileID: 8300000, guid: b06c3de54c60cfe4f94f5b8093d5a72f, type: 3}
   - {fileID: 8300000, guid: 0dd7e69bcd2aa3c49a32308734bcdec2, type: 3}
@@ -3955,8 +3955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 700}
+  m_AnchoredPosition: {x: -0.8, y: 0.6}
+  m_SizeDelta: {x: 571.1, y: 574.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8415611212488438877
 CanvasRenderer:
@@ -4344,8 +4344,56 @@ MonoBehaviour:
   letterInside: {fileID: 4000518820284667183}
   locks: {fileID: 786242219868457615}
   letterImages:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 3f7ca4db2128c80469993a012b1bd4b3, type: 3}
+  - {fileID: 21300000, guid: 0eb9dae04f1a23545980a3b27b2cd132, type: 3}
+  - {fileID: 21300000, guid: 88fbb1fde71d7bb468262fcf0e580a87, type: 3}
+  - {fileID: 21300000, guid: f00cb2da528d06e4585dc792ad334da0, type: 3}
+  - {fileID: 21300000, guid: 8fd09187e5ae1ec49aab5d4abc0af844, type: 3}
+  - {fileID: 21300000, guid: 2301692102dc86a49aaa2e8bd4057a2f, type: 3}
+  - {fileID: 21300000, guid: 23ec6729184cd0d42bcaa81d08f8ec1c, type: 3}
+  - {fileID: 21300000, guid: 44979a2e490520247bfce44fdc14bc76, type: 3}
+  - {fileID: 21300000, guid: 78f593d5dbd769848b8cb08a5477601b, type: 3}
+  - {fileID: 21300000, guid: 7c08512c8e769b54b85567534dde4eef, type: 3}
+  - {fileID: 21300000, guid: 857bc610f62a17740a546ca6fbcb99d9, type: 3}
+  - {fileID: 21300000, guid: dffdc6e64850e5840a805c896280c35d, type: 3}
+  - {fileID: 21300000, guid: a2cc3b477694bc340a331734fc7f629d, type: 3}
+  - {fileID: 21300000, guid: 650a0129b28bb4643bae415111b07e2a, type: 3}
+  - {fileID: 21300000, guid: 59799c17c768c8946b04df51838ecac3, type: 3}
+  - {fileID: 21300000, guid: d631f0bcec962f648b6102670d62b275, type: 3}
+  - {fileID: 21300000, guid: 7191377b44b8c58439d4afc28f250b78, type: 3}
+  - {fileID: 21300000, guid: 3cf8f154a83a6dd4d9a0fc2d3c19bddb, type: 3}
+  - {fileID: 21300000, guid: a65287bf8866d5b4586fdc2a1671fefc, type: 3}
+  - {fileID: 21300000, guid: c362dba16c4756b409552116806fbf8a, type: 3}
+  - {fileID: 21300000, guid: 5582b0ff3936e534784f30f175a59e2f, type: 3}
+  - {fileID: 21300000, guid: 8c701ecd2c82b734a87855293348188a, type: 3}
+  - {fileID: 21300000, guid: 59e815b94cb914b43817e542b16ac144, type: 3}
+  - {fileID: 21300000, guid: 54d220ba4f31bf84dad59353db5b0bc7, type: 3}
+  - {fileID: 21300000, guid: 49f977b7b8daef0438cb7a58b7dd3ea3, type: 3}
+  - {fileID: 21300000, guid: 02ac624c832bcf54ea8481b81a995c36, type: 3}
+  - {fileID: 21300000, guid: 6890014d21a5ca54f8904dce4f23c158, type: 3}
+  - {fileID: 21300000, guid: 69c4880b78de7fc43953f80965ca6171, type: 3}
+  - {fileID: 21300000, guid: d879623732ae96f4695001db2bf15cd1, type: 3}
+  - {fileID: 21300000, guid: 26d5f72327a5daf43bcb6920b39ecb39, type: 3}
+  - {fileID: 21300000, guid: 3b67076557b3c81478d1c36c0493c309, type: 3}
+  - {fileID: 21300000, guid: 6779559e1a0f3ee409ece5a157754bb0, type: 3}
+  - {fileID: 21300000, guid: bc2394de285ef4f4a9f1cbeee646d300, type: 3}
+  - {fileID: 21300000, guid: be5a5c56ba1806942a7bcafb900d7f0e, type: 3}
+  - {fileID: 21300000, guid: 7f712ea5ebc964a43a862688b6671666, type: 3}
+  - {fileID: 21300000, guid: 0e54079f7b9b4754b8b348bde21c1301, type: 3}
+  - {fileID: 21300000, guid: be3ed49ff1d8f6549a7088e3f7f0383c, type: 3}
+  - {fileID: 21300000, guid: 4d14070111e808a4abc3eaefddde8a06, type: 3}
+  - {fileID: 21300000, guid: 07115baeb3bb0a94791e4f902d1c40be, type: 3}
+  - {fileID: 21300000, guid: ac32479b397520140ac0cd1e59e86131, type: 3}
+  - {fileID: 21300000, guid: acf2eddf8d383264b9e1bb6f858fb334, type: 3}
+  - {fileID: 21300000, guid: 04bdc4cd6ae0e454fb7bb59377e97ba0, type: 3}
+  - {fileID: 21300000, guid: 29d11d377b05fc54687eb1448a662840, type: 3}
+  - {fileID: 21300000, guid: c315023a7c10b924195fc6261340bd68, type: 3}
+  - {fileID: 21300000, guid: 30f7ce462d4931147a5af5755c6a83aa, type: 3}
+  - {fileID: 21300000, guid: 8dd1eb1f7873af14a859d04a890ab928, type: 3}
+  - {fileID: 21300000, guid: 9474ce7207c2a4f47a6c59bf4ea56fed, type: 3}
+  - {fileID: 21300000, guid: 9cd766b01cfd3b44d9c9ecad2da8357a, type: 3}
+  - {fileID: 21300000, guid: 28f4531803d4b64469c77ffba2a5eeda, type: 3}
+  - {fileID: 21300000, guid: 3d0f86de227630548a95ca1adbe000c3, type: 3}
 --- !u!1 &5737144446430733764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,8 +4667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 600}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 840, y: 530}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6869496116783279267
 CanvasRenderer:
@@ -4859,8 +4907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 550, y: 500}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 860, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3384810248005518855
 CanvasRenderer:
@@ -4888,7 +4936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3f7ca4db2128c80469993a012b1bd4b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

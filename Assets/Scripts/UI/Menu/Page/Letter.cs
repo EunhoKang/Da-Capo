@@ -24,17 +24,25 @@ public class Letter : Page
         }
     }
     IEnumerator LetterCoroutine(){
+        WaitForSeconds tp=new WaitForSeconds(0.015f);
+        yield return new WaitForSeconds(0.2f);
+        for(int i=0; i<letterImages.Length;i++){
+            letter.sprite=letterImages[i];
+            yield return tp;
+        }
         letterInside.SetActive(true);
-        letter.sprite=letterImages[1];
-        yield return new WaitForSeconds(0.5f);
     }
     public void TouchLetterInside(){
         StartCoroutine(LetterInsideCoroutine());
     }
     IEnumerator LetterInsideCoroutine(){
         letterInside.SetActive(false);
-        letter.sprite=letterImages[0];
-        yield return new WaitForSeconds(0.5f);
+        WaitForSeconds tp=new WaitForSeconds(0.015f);
+        yield return new WaitForSeconds(0.2f);
+        for(int i=0; i<letterImages.Length;i++){
+            letter.sprite=letterImages[letterImages.Length-i-1];
+            yield return tp;
+        }
     }
     public override void Appear(int init,int after){
         if(isChanging)return;
@@ -49,6 +57,7 @@ public class Letter : Page
         letterInside.SetActive(false);
         letter.sprite=letterImages[0];
         locks.gameObject.SetActive(tp);
+        letter.sprite=letterImages[0];
         StartCoroutine(Appearing());
     }
     public override void Disappear(int init,int after){
