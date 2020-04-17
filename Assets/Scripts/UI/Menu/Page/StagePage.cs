@@ -304,7 +304,6 @@ public class StagePage : Page
         StartCoroutine(GameStartCoroutine());
     }
     IEnumerator GameStartCoroutine(){
-        //anim here
         UIManager.instance.SelectSound();
         clockForEffect.gameObject.SetActive(true);
         float dt=0.025f;
@@ -340,7 +339,8 @@ public class StagePage : Page
         clockForEffect.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.2f);
         UIManager.instance.LoadingStart();
-        yield return new WaitForSeconds(0.2f);
+        SoundManager.instance.UIBGMFadeOut();
+        yield return new WaitForSeconds(2.5f);
         StageManager.instance.mapName=songNames[stageNum];
         UIManager.instance.ShowCanvas(1);
         StageManager.instance.Init();

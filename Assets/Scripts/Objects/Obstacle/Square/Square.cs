@@ -74,7 +74,6 @@ public class Square : MonoBehaviour
     }
     Vector3 tt= new Vector3(1.1f,1.1f,1f);
     IEnumerator Appearing(){
-        yield return new WaitForSeconds(duration*0.0625f);
         float spb=StageManager.instance.spb;
         int current=TimeManager.instance.checkpoint;
         int initial=current;
@@ -111,6 +110,7 @@ public class Square : MonoBehaviour
             }
             yield return null;
         }
+        yield return new WaitForSeconds(duration*0.0625f);
         /*
         current=TimeManager.instance.checkpoint;
         initial=current;

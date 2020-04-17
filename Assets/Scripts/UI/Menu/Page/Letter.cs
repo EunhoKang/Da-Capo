@@ -8,6 +8,7 @@ public class Letter : Page
     public Image letter;
     public GameObject letterInside;
     public Image locks;
+    public Sprite[] letterImages;
     private bool isChanging=false;
     public void TouchLetter(){
         UIManager.instance.DefaultSound();
@@ -24,14 +25,16 @@ public class Letter : Page
     }
     IEnumerator LetterCoroutine(){
         letterInside.SetActive(true);
-        yield return null;
+        letter.sprite=letterImages[1];
+        yield return new WaitForSeconds(0.5f);
     }
     public void TouchLetterInside(){
         StartCoroutine(LetterInsideCoroutine());
     }
     IEnumerator LetterInsideCoroutine(){
         letterInside.SetActive(false);
-        yield return null;
+        letter.sprite=letterImages[0];
+        yield return new WaitForSeconds(0.5f);
     }
     public override void Appear(int init,int after){
         if(isChanging)return;
@@ -43,6 +46,8 @@ public class Letter : Page
                 tp=true;
             }
         }
+        letterInside.SetActive(false);
+        letter.sprite=letterImages[0];
         locks.gameObject.SetActive(tp);
         StartCoroutine(Appearing());
     }

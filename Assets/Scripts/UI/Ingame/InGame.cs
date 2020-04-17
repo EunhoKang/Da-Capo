@@ -11,6 +11,7 @@ public class InGame : MonoBehaviour
     public Text combo;
     public GameObject[] offsetSettingTarget;
     public GameObject pauseMenu;
+    public GameObject gameoverObject;
     public GameObject min;
     public Text[] texts;
     public Image[] images;
@@ -28,6 +29,7 @@ public class InGame : MonoBehaviour
         }
         isPaused=false;
         pauseMenu.SetActive(false);
+        gameoverObject.SetActive(false);
         score.text="00000000";
         combo.text="0000";
         healthSlider.value=healthSlider.maxValue;
@@ -228,6 +230,9 @@ public class InGame : MonoBehaviour
         Time.timeScale=0;
         SoundManager.instance.SoundPause();
     }
+    public void GameOver(){
+        gameoverObject.SetActive(true);
+    }
     public void Resume(){
         UIManager.instance.DefaultSound();
         isPaused=false;
@@ -246,6 +251,7 @@ public class InGame : MonoBehaviour
         UIManager.instance.DefaultSound();
         StageManager.instance.EndStage();
         UIManager.instance.ShowCanvas(0);
+        CanPause();
         UIManager.instance.RemoveCanvas(1);
         UIManager.instance.SetTrueUICam();
     }

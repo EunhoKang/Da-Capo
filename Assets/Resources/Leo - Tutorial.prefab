@@ -49,7 +49,7 @@ MonoBehaviour:
   runTime: 134
   metronomeRate: 0.0625
   offset: 0.08
-  backgroundIllust: {fileID: 0}
+  backgroundIllust: {fileID: 21300000, guid: 2e9348bac34412543b28891cd7186705, type: 3}
   noteFile: {fileID: 4900000, guid: 63795219cf4111645960b2d945fed391, type: 3}
   lyrics: {fileID: 4900000, guid: ffe33ca3885ba1943bf6531e913e2ca6, type: 3}
   initPos: {x: -6, y: -3, z: 0}

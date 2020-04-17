@@ -46,10 +46,10 @@ MonoBehaviour:
   stageNum: 8
   songFile: {fileID: 8300000, guid: 6332adee452ccde42a60cc237c70ce01, type: 3}
   BPM: 128
-  runTime: 162
+  runTime: 163
   metronomeRate: 0.0625
   offset: 0.23
-  backgroundIllust: {fileID: 21300000, guid: 31f687f71ce04f7459cedbd9c85e5483, type: 3}
+  backgroundIllust: {fileID: 21300000, guid: b7dc8cff709070241969304d4dc1b6b4, type: 3}
   noteFile: {fileID: 4900000, guid: 79911316275e9b948b8a3ffbd244637b, type: 3}
   lyrics: {fileID: 4900000, guid: f46ab1f054cbd0e449ec4cbd04b18f4c, type: 3}
   initPos: {x: -6, y: -3, z: 0}

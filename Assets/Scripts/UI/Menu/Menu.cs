@@ -27,7 +27,23 @@ public class Menu : MonoBehaviour
         }
     }
     public void BGPerClear(){
-        //
+        float persent=1f;
+        JClass temp=DataManager.instance._data;
+        float amount=1f/((float)temp.stages.Count*3);
+        for(int i=0;i<temp.stages.Count;i++){
+            if(temp.stages[i].isCleared){
+                persent-=amount;
+            }
+            if(temp.stages[i].isNoMiss){
+                persent-=amount;
+            }
+            if(temp.stages[i].isFullCombo){
+                persent-=amount;
+            }
+        }
+        Color color=bg.color;
+        color.a=persent;
+        bg.color=color;
     }
     public void ButtonPushed(bool isRight){
         if(isChanging || (isRight && pageNum>=maxPage) || (!isRight && pageNum<=0))return;

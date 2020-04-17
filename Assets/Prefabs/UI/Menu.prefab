@@ -4343,6 +4343,9 @@ MonoBehaviour:
   letter: {fileID: 1617709753965975660}
   letterInside: {fileID: 4000518820284667183}
   locks: {fileID: 786242219868457615}
+  letterImages:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5737144446430733764
 GameObject:
   m_ObjectHideFlags: 0

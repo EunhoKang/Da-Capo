@@ -16,9 +16,7 @@ public class StageManager : MonoBehaviour
         DontDestroyOnLoad(this);
 	}
     [HideInInspector]public string mapName;
-    public GameObject grid;
     [HideInInspector]public float offset=0.2f;
-    private Grid gridScript;
     private float startDelay;
     [HideInInspector]public int stageNum;
     [HideInInspector]public StageFile stagefile;
@@ -34,7 +32,6 @@ public class StageManager : MonoBehaviour
         spb=60/stagefile.BPM;
         stageNum=stagefile.stageNum;
         offset=DataManager.instance._data.offset;
-        gridScript=Instantiate(grid,stagefile.initPos,Quaternion.identity).GetComponent<Grid>();
         if(ingameUI!=null){
             ingameUI.dashDistance=stagefile.dashLength;
             ingameUI.healthSlider.maxValue=stagefile.playerHealth;
@@ -87,13 +84,10 @@ public class StageManager : MonoBehaviour
         UIManager.instance.LoadingEnd();
         if(stageNum!=-1){
             EventManager.instance.ShowLyrics(0,0,true);
-            gridScript.InitAnimation();
-            StartCoroutine(MoveGrid());
+            StageManager.instance.ingameUI.CanPause();
         }
         BackgroundManager.instance.SetIllust(stagefile.backgroundIllust);
         float OS=offset+stagefile.offset;
-        yield return new WaitForSeconds(0.2f);
-        StageManager.instance.ingameUI.CanPause();
         //Start Effect
         Vector3 T;
         for(int i=0;i<notes.Count;i++){
@@ -166,42 +160,32 @@ public class StageManager : MonoBehaviour
         Time.timeScale=1;
         SoundManager.instance.BGMFadeOut();
         ingameUI.FadeOut();
-        yield return new WaitForSeconds(1f);
-        UIManager.instance.LoadingStart();
-        yield return new WaitForSeconds(0.5f);
-        UIManager.instance.LoadingEnd();
-        UIManager.instance.ShowCanvas(0);
-        StageManager.instance.EndStage();
-        UIManager.instance.RemoveCanvas(1);
-        UIManager.instance.SetTrueUICam();
+        ingameUI.CantPause();
+        yield return new WaitForSeconds(1.5f);
+        ingameUI.GameOver();
+        StopAllCoroutines();
     }
     public IEnumerator ResultingCoroutine(){
-        SoundManager.instance.BGMFadeOut();
-        DataManager.instance.StageCleared(CountManager.instance.stageCleared,
-        StageManager.instance.stagefile.stageNum,
-        CountManager.instance.score,
-        CountManager.instance.hit==0 ? true : false,
-        CountManager.instance.miss==0 ? true : false);
-        yield return new WaitForSeconds(0.5f);
-        ingameUI.FadeOut();
-        yield return new WaitForSeconds(0.5f);
-        UIManager.instance.ShowCanvas(2);
-        yield return new WaitForSeconds(0.5f);
-        UIManager.instance.RemoveCanvas(1);
-        UIManager.instance.SetTrueUICam();
-        EndStage();
+        if(!isGameEnd){
+            SoundManager.instance.BGMFadeOut();
+            DataManager.instance.StageCleared(CountManager.instance.stageCleared,
+            StageManager.instance.stagefile.stageNum,
+            CountManager.instance.score,
+            CountManager.instance.hit==0 ? true : false,
+            CountManager.instance.miss==0 ? true : false);
+            yield return new WaitForSeconds(0.5f);
+            ingameUI.FadeOut();
+            yield return new WaitForSeconds(0.5f);
+            UIManager.instance.ShowCanvas(2);
+            yield return new WaitForSeconds(0.5f);
+            UIManager.instance.RemoveCanvas(1);
+            UIManager.instance.SetTrueUICam();
+            EndStage();
+        }
     }
 
     public void GetIngameUI(InGame script){
         ingameUI=script;
-    }
-
-    public IEnumerator MoveGrid(){
-        WaitForSeconds tp=new WaitForSeconds(0.5f);
-        while(!isGameEnd){
-            gridScript.MoveToTargetDirection(CharacterManager.instance.FindPlayer());
-            yield return tp;
-        }
     }
 
     public void EndStage(){
@@ -216,9 +200,7 @@ public class StageManager : MonoBehaviour
         TimeManager.instance.EndTime();
         StopAllCoroutines();
         ingameUI.ResetUI();
-        Destroy(gridScript.gameObject);
         ingameUI=null;
         stagefile=null;
-        gridScript=null;
     }
 }
