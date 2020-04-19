@@ -34,11 +34,11 @@ public class SquareManager : MonoBehaviour
         float warnTime=squarePrefab.warnTime;
         yield return new WaitForSeconds(waitTime-warnTime);
         Square temp=getSquare();
-        temp.transform.position=CharacterManager.instance.FindPlayerForEnemy();
         temp.gameObject.SetActive(true);
         temp.Loom();
         yield return new WaitForSeconds(warnTime);
         temp.Appear();
+        temp.transform.position=CharacterManager.instance.FindPlayerForEnemy();
     }
 
     public Square getSquare(){

@@ -51,10 +51,10 @@ public class CountManager : MonoBehaviour
             combo+=4;
             ultimate++;
         }else if(judge==1){
-            combo+=3;
+            combo+=2;
             perfect++;
         }else if(judge==2){
-            combo+=1;
+            BreakCombo();
             good++;
         }else{
             BreakCombo();

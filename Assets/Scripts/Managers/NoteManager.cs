@@ -90,11 +90,11 @@ public class NoteManager : MonoBehaviour
         judgeDistance,(1<<LayerMask.NameToLayer("Note")));
         if(hit2D.Length!=0){
             float diff=hit2D[0].collider.transform.position.y-heartTransform.position.y;
-                if(diff>-0.8f && diff<=0.8f){
+                if(diff>-0.5f && diff<=0.5f){
                     JudgeSend(0);
-                }else if(diff>-1f && diff<=1f){
+                }else if(diff>-0.75f && diff<=0.75f){
                     JudgeSend(1);
-                }else if(diff>-1.2f && diff<1.2f){
+                }else if(diff>-1f && diff<1f){
                     JudgeSend(2);
                 }else{
                     JudgeSend(3);

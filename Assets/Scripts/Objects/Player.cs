@@ -26,14 +26,15 @@ public class Player : MonoBehaviour
     private float hourInitRotation;
     private IEnumerator moveCoroutine;
     private bool isSilhouetteOn=false;
-
+    private float spb;
     public void Setup(){
         rb=GetComponent<Rigidbody2D>();
         rate=StageManager.instance.stagefile.metronomeRate;
         health=StageManager.instance.stagefile.playerHealth;
+        spb=StageManager.instance.spb;
         isImmuneByHit=false;
         isImmuneByMove=false;
-        tptime=new WaitForSeconds(0.015625f*StageManager.instance.spb);
+        tptime=new WaitForSeconds(0.015625f*spb);
         healthSlider.maxValue=health;
         healthSlider.value=health;
         healthSlider.gameObject.SetActive(false);
@@ -109,6 +110,9 @@ public class Player : MonoBehaviour
         target.z=0;
         int temp=(int)(16f*Vector3.Magnitude(direction));
         float reverseTp;
+        if(temp>10){
+            temp=10;
+        }
         if(temp>0){
             reverseTp=1f/(float)temp;
         }else{
@@ -119,14 +123,14 @@ public class Player : MonoBehaviour
             if(health>0){
 			    rb.MovePosition(Vector3.Lerp(transform.position,target,reverseTp*i));
             }
-            if(i>temp/2f){
+            if(i>4 || i==temp){
                 isImmuneByMove=false;
             }
 			yield return tptime;
 		}
-        yield return tptime;
         isImmuneByMove=false;
         moveCoroutine=null;
+        yield return new WaitForSeconds(0.0625f*spb);
         CharacterManager.instance.UpdatePlayerPos(transform.position);
 	}
     public void PlayerDamaged(float damage){

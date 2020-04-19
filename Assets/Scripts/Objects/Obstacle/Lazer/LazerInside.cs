@@ -5,10 +5,18 @@ using UnityEngine;
 public class LazerInside : MonoBehaviour
 {
     public float damage;
-    protected void OnTriggerEnter2D(Collider2D other)
+    bool isHitPlayer;
+    public void OnEnable(){
+        isHitPlayer=false;
+    }
+    protected void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.layer==LayerMask.NameToLayer("Player")){
+            if(isHitPlayer){
+                return;
+            }
             CharacterManager.instance.PlayerGetDamage(damage);
+            isHitPlayer=true;
         }
     }
 }

@@ -1,5 +1,5 @@
 Time,Notes,Spawn,Attack,Camera,Event,Lyrics,Timer,Obstacle
-0,,1^(rand^rand),,,,,,0^0^10
+0,,1^(rand^rand),,,,,,
 4,1,1^(rand^rand),1,,,,,
 8,1,1^(rand^rand),1,,,,,
 12,1,1^(rand^rand),1,,,,,

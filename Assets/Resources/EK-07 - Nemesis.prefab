@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2e2df43c8d5024e8337b93b1ff3c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageNum: 8
+  stageNum: 9
   songFile: {fileID: 8300000, guid: 6332adee452ccde42a60cc237c70ce01, type: 3}
   BPM: 128
   runTime: 163

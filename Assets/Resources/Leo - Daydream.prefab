@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageNum: 2
-  songFile: {fileID: 8300000, guid: 0dd7e69bcd2aa3c49a32308734bcdec2, type: 3}
+  songFile: {fileID: 8300000, guid: 3c9b6063ba686434097943ffda12012d, type: 3}
   BPM: 108
   runTime: 177
   metronomeRate: 0.0625

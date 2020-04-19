@@ -80,13 +80,13 @@ public class StageManager : MonoBehaviour
         }else{
             ingameUI.SettingForOffset();
         }
+        BackgroundManager.instance.SetIllust(stagefile.backgroundIllust);
         yield return new WaitForSeconds(0.2f);
         UIManager.instance.LoadingEnd();
         if(stageNum!=-1){
             EventManager.instance.ShowLyrics(0,0,true);
             StageManager.instance.ingameUI.CanPause();
         }
-        BackgroundManager.instance.SetIllust(stagefile.backgroundIllust);
         float OS=offset+stagefile.offset;
         //Start Effect
         Vector3 T;
@@ -172,7 +172,7 @@ public class StageManager : MonoBehaviour
             StageManager.instance.stagefile.stageNum,
             CountManager.instance.score,
             CountManager.instance.hit==0 ? true : false,
-            CountManager.instance.miss==0 ? true : false);
+            (CountManager.instance.miss==0 ? true : false) && (CountManager.instance.good==0 ? true : false));
             yield return new WaitForSeconds(0.5f);
             ingameUI.FadeOut();
             yield return new WaitForSeconds(0.5f);

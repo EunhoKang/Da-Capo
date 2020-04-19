@@ -128,11 +128,14 @@ public class InGame : MonoBehaviour
                 if(Input.GetButtonDown("hit1")){
                     joystickDirection=CameraManager.instance.cam.ScreenToWorldPoint((Input.mousePosition))-CharacterManager.instance.FindPlayer();
                     joystickDirection.z=0;
+                    /*
                     if(joystickDirection.magnitude>dashDistance){
                         joystickDirection=Vector3.Normalize(joystickDirection);
                     }else{
                         joystickDirection/=dashDistance;
                     }
+                    */
+                    joystickDirection/=dashDistance;
                     NoteManager.instance.JudgeNote(joystickDirection);
                 }
             }
@@ -142,11 +145,14 @@ public class InGame : MonoBehaviour
             if(CameraManager.instance.cam!=null && CharacterManager.instance!=null){
                 joystickDirection=CameraManager.instance.cam.ScreenToWorldPoint((Input.mousePosition))-CharacterManager.instance.FindPlayer();
 		        joystickDirection.z=0;
+                /*
                 if(joystickDirection.magnitude>dashDistance){
                     joystickDirection=Vector3.Normalize(joystickDirection);
                 }else{
                     joystickDirection/=dashDistance;
                 }
+                */
+                joystickDirection/=dashDistance;
                 CharacterManager.instance.SetSilhouettePos(joystickDirection);
             }
             if(Input.GetButtonDown("hit1")){
