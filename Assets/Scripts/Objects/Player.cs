@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         minInitRotation=min.transform.rotation.z;
         hourInitRotation=hour.transform.rotation.z;
         #if UNITY_ANDROID && !UNITY_EDITOR
-        maxDistanceBar.SetActive(true);
+        maxDistanceBar.SetActive(false);
         maxDistanceBar.transform.localScale*=CharacterManager.instance.dashDistance*0.4f;
         #else
         maxDistanceBar.SetActive(false);
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
 		}
         isImmuneByMove=false;
         moveCoroutine=null;
-        yield return new WaitForSeconds(0.0625f*spb);
+        yield return tptime;
         CharacterManager.instance.UpdatePlayerPos(transform.position);
 	}
     public void PlayerDamaged(float damage){

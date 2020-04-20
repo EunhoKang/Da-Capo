@@ -1695,9 +1695,9 @@ MonoBehaviour:
   - EK-07 - Revolution
   - EK-07 - Cotton Candy
   bgs:
-  - {fileID: 21300000, guid: 0ff850de2b6076f4fb59de0eb138f40e, type: 3}
-  - {fileID: 21300000, guid: 99f153b74129a3741aaa6f2c6877f572, type: 3}
-  - {fileID: 21300000, guid: 0ff850de2b6076f4fb59de0eb138f40e, type: 3}
+  - {fileID: 21300000, guid: fd0eb3cab12ce764fa4ac547dc919543, type: 3}
+  - {fileID: 21300000, guid: 72b84907d6527e84c8c23057d54e21a0, type: 3}
+  - {fileID: 21300000, guid: 2fc00bc780670c0498368b4c9ee92921, type: 3}
   - {fileID: 21300000, guid: 99f153b74129a3741aaa6f2c6877f572, type: 3}
   - {fileID: 21300000, guid: e4087c93f4b734241b98038bb2c64161, type: 3}
   - {fileID: 21300000, guid: f43fdcea590f9ca40a8fe64c202cbdb3, type: 3}
@@ -1714,7 +1714,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 32432c048a4927b42b8dc4da6e02c366, type: 3}
   - {fileID: 8300000, guid: 3472905dc1b370640a5243062e1b08e2, type: 3}
   - {fileID: 8300000, guid: 6b92847402b589a4483d8a15280c861a, type: 3}
-  - {fileID: 8300000, guid: 6332adee452ccde42a60cc237c70ce01, type: 3}
+  - {fileID: 8300000, guid: 659ed1664dbd45c4796583562035bc7a, type: 3}
   - {fileID: 8300000, guid: 6332adee452ccde42a60cc237c70ce01, type: 3}
   - {fileID: 8300000, guid: e0d044b7f885b2845987f1859899b122, type: 3}
   - {fileID: 8300000, guid: 6cef1e08d72cd6a499d51121a3ecdcad, type: 3}

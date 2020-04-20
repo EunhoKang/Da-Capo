@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageNum: 8
-  songFile: {fileID: 8300000, guid: b06c3de54c60cfe4f94f5b8093d5a72f, type: 3}
-  BPM: 120
-  runTime: 134
+  songFile: {fileID: 8300000, guid: 659ed1664dbd45c4796583562035bc7a, type: 3}
+  BPM: 164
+  runTime: 189
   metronomeRate: 0.0625
   offset: 0.07
   backgroundIllust: {fileID: 21300000, guid: 51dec35780291d64badb47afee779e62, type: 3}
@@ -68,4 +68,6 @@ MonoBehaviour:
     type: 3}
   bulletPrefab: {fileID: 3613694990891988726, guid: f4202492beb96984393c5d0b207fef32,
     type: 3}
-  usingObstacle: []
+  usingObstacle:
+  - {fileID: 4826501396896828211, guid: 09a240d5695c77c4490b012d0292cf68, type: 3}
+  - {fileID: 7235193783484857311, guid: f662b98703a150348b67ad4fdbbf9028, type: 3}

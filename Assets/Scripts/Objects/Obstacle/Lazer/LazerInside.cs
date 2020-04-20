@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LazerInside : MonoBehaviour
 {
-    public float damage;
+    [HideInInspector] public float damage;
     bool isHitPlayer;
     public void OnEnable(){
         isHitPlayer=false;
