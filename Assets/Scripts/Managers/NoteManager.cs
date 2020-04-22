@@ -32,19 +32,19 @@ public class NoteManager : MonoBehaviour
     private float noteDelay;
     private Vector3 noteSpeed;
     private List<Note> Notes;
-    
-    
-    public void Init()//Initialize manager. the first function activated
+    private float missDistanceReverse;
+    public void Init()
     {
         rate=StageManager.instance.stagefile.metronomeRate;
         heartTransform=CameraManager.instance.camAction.heartTransform;
         noteSpawnTransform=CameraManager.instance.camAction.noteSpawnTransform;
         rayStartPoint=CameraManager.instance.camAction.rayStartPoint;
+        noteSpeed=(rayStartPoint.position-heartTransform.position)*noteSpeedMultiplier;
+        missDistanceReverse=1f/(float)(heartTransform.position.y-rayStartPoint.position.y);
+        noteDelay=Vector3.Magnitude(heartTransform.position-noteSpawnTransform.position)/Vector3.Magnitude(noteSpeed);
         line=Instantiate(linePrefab,heartTransform.position,Quaternion.identity);
         line.transform.SetParent(CameraManager.instance.cam.transform);
         lineScript=line.GetComponent<Line>();
-        noteSpeed=(rayStartPoint.position-heartTransform.position)*noteSpeedMultiplier;
-        noteDelay=Vector3.Magnitude(heartTransform.position-noteSpawnTransform.position)/Vector3.Magnitude(noteSpeed);
         StageManager.instance.SetStartDelay(noteDelay+0.01f);
         Notes=new List<Note>();
         for(int i=0;i<8;i++){
@@ -89,12 +89,12 @@ public class NoteManager : MonoBehaviour
         RaycastHit2D[] hit2D=Physics2D.RaycastAll(rayStartPoint.position,(heartTransform.position-rayStartPoint.position),
         judgeDistance,(1<<LayerMask.NameToLayer("Note")));
         if(hit2D.Length!=0){
-            float diff=hit2D[0].collider.transform.position.y-heartTransform.position.y;
-                if(diff>-0.5f && diff<=0.5f){
+            float diff=(hit2D[0].collider.transform.position.y-heartTransform.position.y)*missDistanceReverse;
+                if(diff>-0.4f && diff<=0.4f){
                     JudgeSend(0);
-                }else if(diff>-0.75f && diff<=0.75f){
+                }else if(diff>-0.6f && diff<=0.6f){
                     JudgeSend(1);
-                }else if(diff>-1f && diff<1f){
+                }else if(diff>-0.8f && diff<0.8f){
                     JudgeSend(2);
                 }else{
                     JudgeSend(3);

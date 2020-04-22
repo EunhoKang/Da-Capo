@@ -1,37 +1,70 @@
 fileFormatVersion: 2
-guid: bbdc4dbe459187441b8496cae0d4b473
+guid: 0f7ff7e4525a83441babf5f8fc0de54f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8559539657949587546
-    second: BlackholeWarn_0
+      213: -6079774996661795311
+    second: BlackholeWarn 1_0
   - first:
-      213: 3444838563681442787
-    second: BlackholeWarn_1
+      213: -1403579562964291475
+    second: BlackholeWarn 1_1
   - first:
-      213: 6460071704467178214
-    second: BlackholeWarn_2
+      213: 6630582552300060190
+    second: BlackholeWarn 1_2
   - first:
-      213: 926806812577117878
-    second: BlackholeWarn_3
+      213: -2626842379131901406
+    second: BlackholeWarn 1_3
   - first:
-      213: 2263902472763215914
-    second: BlackholeWarn_4
+      213: 4584378787822585946
+    second: BlackholeWarn 1_4
   - first:
-      213: -6891272770099236591
-    second: BlackholeWarn_5
+      213: 5376214026261845891
+    second: BlackholeWarn 1_5
   - first:
-      213: 3193997640040574273
-    second: BlackholeWarn_6
+      213: 7613562448407431521
+    second: BlackholeWarn 1_6
   - first:
-      213: -7898659916685036235
-    second: BlackholeWarn_7
+      213: 2565360050527885887
+    second: BlackholeWarn 1_7
   - first:
-      213: 3726282975401651233
-    second: BlackholeWarn_8
+      213: 5099379950217589813
+    second: BlackholeWarn 1_8
   - first:
-      213: -1936653491200626783
-    second: BlackholeWarn_9
+      213: -489678463818099049
+    second: BlackholeWarn 1_9
+  - first:
+      213: 1634713801044698129
+    second: BlackholeWarn 1_10
+  - first:
+      213: 7004564519213225349
+    second: BlackholeWarn 1_0
+  - first:
+      213: 2538097732754363814
+    second: BlackholeWarn 1_1
+  - first:
+      213: 8876007217602753238
+    second: BlackholeWarn 1_2
+  - first:
+      213: -5431217414575868739
+    second: BlackholeWarn 1_3
+  - first:
+      213: -3535892377518755118
+    second: BlackholeWarn 1_4
+  - first:
+      213: 6712012519395933157
+    second: BlackholeWarn 1_5
+  - first:
+      213: -1345644384885058905
+    second: BlackholeWarn 1_6
+  - first:
+      213: 7820274360001167470
+    second: BlackholeWarn 1_7
+  - first:
+      213: 3618417623888940480
+    second: BlackholeWarn 1_8
+  - first:
+      213: 6611323516988554228
+    second: BlackholeWarn 1_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -75,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 180
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -141,13 +174,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlackholeWarn_0
+      name: BlackholeWarn 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 460
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +188,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5824f0f7f799c670800000000000000
-      internalID: 8559539657949587546
+      spriteID: 58552068156353160800000000000000
+      internalID: 7004564519213225349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_1
+      name: BlackholeWarn 1_1
       rect:
         serializedVersion: 2
-        x: 517
+        x: 541
         y: 0
-        width: 464
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eb9cc01c668ecf20800000000000000
-      internalID: 3444838563681442787
+      spriteID: 6a55c06c072293320800000000000000
+      internalID: 2538097732754363814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_2
+      name: BlackholeWarn 1_2
       rect:
         serializedVersion: 2
-        x: 1038
+        x: 1081
         y: 0
-        width: 464
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e281500df8c6a950800000000000000
-      internalID: 6460071704467178214
+      spriteID: 6d2f30d8989ed2b70800000000000000
+      internalID: 8876007217602753238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_3
+      name: BlackholeWarn 1_3
       rect:
         serializedVersion: 2
-        x: 1557
+        x: 1621
         y: 0
-        width: 464
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b63217b2edacdc00800000000000000
-      internalID: 926806812577117878
+      spriteID: db43a4a898070a4b0800000000000000
+      internalID: -5431217414575868739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_4
+      name: BlackholeWarn 1_4
       rect:
         serializedVersion: 2
-        x: 2076
+        x: 2162
         y: 0
-        width: 465
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +272,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a201e27ed4ffa6f10800000000000000
-      internalID: 2263902472763215914
+      spriteID: 2d2bbf9dd9cfdeec0800000000000000
+      internalID: -3535892377518755118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_5
+      name: BlackholeWarn 1_5
       rect:
         serializedVersion: 2
-        x: 2596
+        x: 2704
         y: 0
-        width: 464
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 111b9e75de74d50a0800000000000000
-      internalID: -6891272770099236591
+      spriteID: 5ebb19a13dbd52d50800000000000000
+      internalID: 6712012519395933157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_6
+      name: BlackholeWarn 1_6
       rect:
         serializedVersion: 2
-        x: 3118
+        x: 3245
         y: 0
-        width: 464
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +314,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ded0c5eeb535c20800000000000000
-      internalID: 3193997640040574273
+      spriteID: 7a25decbf8f435de0800000000000000
+      internalID: -1345644384885058905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_7
+      name: BlackholeWarn 1_7
       rect:
         serializedVersion: 2
-        x: 3637
+        x: 3786
         y: 0
-        width: 464
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +335,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5353f5897a2526290800000000000000
-      internalID: -7898659916685036235
+      spriteID: e6007f9c812378c60800000000000000
+      internalID: 7820274360001167470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_8
+      name: BlackholeWarn 1_8
       rect:
         serializedVersion: 2
-        x: 4157
+        x: 4326
         y: 0
-        width: 466
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +356,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12ca6699f9a66b330800000000000000
-      internalID: 3726282975401651233
+      spriteID: 0cdc9e068a3373230800000000000000
+      internalID: 3618417623888940480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlackholeWarn_9
+      name: BlackholeWarn 1_9
       rect:
         serializedVersion: 2
-        x: 4676
+        x: 4866
         y: 0
-        width: 463
-        height: 459
+        width: 498
+        height: 496
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,8 +377,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1af67fb19ef9f15e0800000000000000
-      internalID: -1936653491200626783
+      spriteID: 4fbf94dd5b320cb50800000000000000
+      internalID: 6611323516988554228
       vertices: []
       indices: 
       edges: []

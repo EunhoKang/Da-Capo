@@ -21,9 +21,9 @@ public class CharacterManager : MonoBehaviour
     private GameObject player;
 	private Player playerScript;
 	[HideInInspector] public float dashDistance;
-	private bool isplayerDead;//쓸일 없으면 완성 시 지울 것
+	private bool isplayerDead;
 
-    public void Init()//Initialize manager. the first function activated
+    public void Init()
     {
 		rate=StageManager.instance.stagefile.metronomeRate;
 		Vector3 temp=StageManager.instance.stagefile.initPos+CameraManager.instance.cam.gameObject.transform.position;
@@ -41,7 +41,6 @@ public class CharacterManager : MonoBehaviour
 		lastPos=pos;
 	}
 
-	//Order Move
 	public void MoveOrder(Vector3 direction){
 		if(isplayerDead) return;
 		playerScript.MovePlayer(direction,dashDistance);
@@ -59,6 +58,7 @@ public class CharacterManager : MonoBehaviour
 		playerScript.SpinNiddles();
 	}
 	public void PlayerDead(){
+		isplayerDead=true;
 		StageManager.instance.isGameEnd=true;
 		StageManager.instance.EndToShowResult(false);
 	}

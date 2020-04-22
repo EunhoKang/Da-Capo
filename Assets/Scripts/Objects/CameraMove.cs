@@ -9,6 +9,8 @@ public class CameraMove : MonoBehaviour
     public Rigidbody2D rb;
     public List<SpriteRenderer> eventPos1;
     public List<SpriteRenderer> eventPos2;
+    public Image[] health;
+    public Image healthBar;
     public Image IllustPos;
     public Text centerText;
     public Transform heartTransform;

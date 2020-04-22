@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     public SpriteRenderer sr;
     public GameObject min;
     public GameObject hour;
-    public GameObject maxDistanceBar;
     [HideInInspector]public float rate;
     private float health;
     private WaitForSeconds tptime;
@@ -40,12 +39,6 @@ public class Player : MonoBehaviour
         healthSlider.gameObject.SetActive(false);
         minInitRotation=min.transform.rotation.z;
         hourInitRotation=hour.transform.rotation.z;
-        #if UNITY_ANDROID && !UNITY_EDITOR
-        maxDistanceBar.SetActive(false);
-        maxDistanceBar.transform.localScale*=CharacterManager.instance.dashDistance*0.4f;
-        #else
-        maxDistanceBar.SetActive(false);
-        #endif
     }
     public void SetSilhouette(Vector3 pos){
         if(pos!=Vector3.zero){
@@ -131,6 +124,7 @@ public class Player : MonoBehaviour
         isImmuneByMove=false;
         moveCoroutine=null;
         yield return tptime;
+        yield return tptime;
         CharacterManager.instance.UpdatePlayerPos(transform.position);
 	}
     public void PlayerDamaged(float damage){
@@ -139,15 +133,10 @@ public class Player : MonoBehaviour
         health-=damage;
         StartImmune();
         CountManager.instance.DiscountScoreFromHit(damage);
-        StageManager.instance.ingameUI.UpdateHealthSlider(health);
+        CountManager.instance.UpdateHealthSlider(health);
         if(health<=0){
             Dead();
         }
-    }
-
-    public void PlayerHealed(float amount){
-        health+=amount;
-        StageManager.instance.ingameUI.UpdateHealthSlider(health);
     }
 
     private void Dead(){
@@ -188,7 +177,8 @@ public class Player : MonoBehaviour
             c.a=i;
             fill.color=c;
             fill.gameObject.transform.localScale=temp*(2-i*2);
-            yield return null;
+            yield return tptime;
+            yield return tptime;
         }
         healthSlider.gameObject.SetActive(false);
     }

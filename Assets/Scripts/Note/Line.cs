@@ -7,6 +7,7 @@ public class Line : MonoBehaviour
     public float initialSpeed=2f;
     public float standardSpb=0.5f;
     public ParticleSystem[] noteHitPrefab;
+    public GameObject rayPoint;
 
     List<List<ParticleSystem>> effectLists;
     
@@ -23,6 +24,11 @@ public class Line : MonoBehaviour
                 effectLists[i].Add(obj);
             }
         }
+    }
+    public void OnEnable()
+    {
+        rayPoint.transform.localPosition=
+        NoteManager.instance.rayStartPoint.position-NoteManager.instance.heartTransform.position;
     }
     public void NoteHitted(int judge){
         if(judge>=noteHitPrefab.Length){

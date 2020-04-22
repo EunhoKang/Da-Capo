@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
+    public GameObject other;
+    public Vector3 otherPos;
     Vector3 noteSpeed;
     Material material;
     BoxCollider2D col;
     float rate;
     public GameObject matObject;
+    /*
     public float maxFade = 0.7f;
-    public float deltaFade = 0.07f;
+    public float deltaFade = 0.035f;
     public float startFade=0.21f;
+    */
     IEnumerator fallCoroutine;
     public void Awake(){
         material=matObject.GetComponent<SpriteRenderer>().material;
         col=GetComponent<BoxCollider2D>();
+    }
+    public void OnEnable(){
+        other.transform.localPosition=otherPos;
     }
     public void StartFall(Vector3 notespeed){
         material.SetFloat("_Fade", 0);
@@ -27,7 +34,8 @@ public class Note : MonoBehaviour
     }
     public IEnumerator Fall(){
         while(this.gameObject.activeInHierarchy){
-            transform.Translate(noteSpeed*Time.deltaTime);
+            transform.position+=noteSpeed*Time.deltaTime;
+            other.transform.localPosition+=noteSpeed*Time.deltaTime*-2f;
             yield return null;
         }
     }
@@ -39,6 +47,7 @@ public class Note : MonoBehaviour
     }
 
     IEnumerator NoteHitEffect(){
+        /*
         int current=TimeManager.instance.checkpoint;
         int initial=current;
         float rate=EnemyManager.instance.rate;
@@ -69,7 +78,9 @@ public class Note : MonoBehaviour
             }
             yield return null;
         }
+        */
         gameObject.SetActive(false);
+        yield return null;
     }
 
     public void EndNote(){

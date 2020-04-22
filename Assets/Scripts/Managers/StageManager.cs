@@ -34,7 +34,6 @@ public class StageManager : MonoBehaviour
         offset=DataManager.instance._data.offset;
         if(ingameUI!=null){
             ingameUI.dashDistance=stagefile.dashLength;
-            ingameUI.healthSlider.maxValue=stagefile.playerHealth;
         }
         CameraManager.instance.Init();
         BackgroundManager.instance.Init();
@@ -158,7 +157,6 @@ public class StageManager : MonoBehaviour
     }
     public IEnumerator GameOver(){
         Time.timeScale=1;
-        SoundManager.instance.BGMFadeOut();
         ingameUI.FadeOut();
         ingameUI.CantPause();
         yield return new WaitForSeconds(1.5f);

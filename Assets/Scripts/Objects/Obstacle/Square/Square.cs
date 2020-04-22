@@ -27,6 +27,7 @@ public class Square : MonoBehaviour
         c=anim.color;
         c.a=1;
         anim.color=c;
+        anim.gameObject.transform.rotation=Quaternion.Euler(Vector3.zero);
     }
     public void OnDisable(){
         StopAllCoroutines();

@@ -203,9 +203,9 @@ public class GameResult : MonoBehaviour
     public void ReStart(){
         UIManager.instance.SelectSound();
         UIManager.instance.SetFalseUICam();
-        UIManager.instance.ShowCanvas(0);
+        UIManager.instance.ShowCanvas(1);
         StageManager.instance.Init();
-        UIManager.instance.RemoveCanvas(1);
+        UIManager.instance.RemoveCanvas(2);
     }
 
     public void BackToMenu(){

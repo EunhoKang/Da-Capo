@@ -6,16 +6,13 @@ using System.Text;
 
 public class InGame : MonoBehaviour
 {
-    public Slider healthSlider;
     public Text score;
     public Text combo;
     public GameObject[] offsetSettingTarget;
     public GameObject pauseMenu;
     public GameObject gameoverObject;
-    public GameObject min;
     public Text[] texts;
     public Image[] images;
-    public Image glass;
     public GameObject pauseButton;
     private Vector3 joystickDirection=new Vector3(0,0,0);
     private StringBuilder scoreStringBuilder=new StringBuilder("00000000");
@@ -24,7 +21,7 @@ public class InGame : MonoBehaviour
     [HideInInspector]public float dashDistance;
 
     public void OnEnable(){//나중에 수정
-        if(StageManager.instance.ingameUI!=this){
+        if(StageManager.instance!=null){
             StageManager.instance.GetIngameUI(this);
         }
         isPaused=false;
@@ -32,11 +29,9 @@ public class InGame : MonoBehaviour
         gameoverObject.SetActive(false);
         score.text="00000000";
         combo.text="0000";
-        healthSlider.value=healthSlider.maxValue;
         Time.timeScale=1;
         scoreStringBuilder=new StringBuilder("00000000");
         comboStringBuilder=new StringBuilder("0000");
-        min.transform.rotation=Quaternion.Euler(Vector3.zero);
         Color c;
         for(int i=0;i<texts.Length;i++){
             c=texts[i].color;
@@ -48,9 +43,6 @@ public class InGame : MonoBehaviour
             c.a=1;
             images[i].color=c;
         }
-        c=glass.color;
-        c.a=0.4f;
-        glass.color=c;
     }
     public void FadeOut(){
         StartCoroutine(Fading());
@@ -72,9 +64,6 @@ public class InGame : MonoBehaviour
             c.a=1;
             images[i].color=c;
         }
-        c=glass.color;
-        c.a=0.4f;
-        glass.color=c;
         while(currentTime<=maxTime){
             currentTime+=Time.deltaTime;
             if(currentTime>=check){
@@ -89,9 +78,6 @@ public class InGame : MonoBehaviour
                     c.a=cCount;
                     images[i].color=c;
                 }
-                c=glass.color;
-                c.a=0.4f*cCount;
-                glass.color=c;
                 check+=dt;
             }
             yield return null;
@@ -106,9 +92,6 @@ public class InGame : MonoBehaviour
             c.a=0;
             images[i].color=c;
         }
-        c=glass.color;
-        c.a=0;
-        glass.color=c;
     }
     public void SettingForOffset(){
         for(int i=0;i<offsetSettingTarget.Length;i++){
@@ -122,36 +105,23 @@ public class InGame : MonoBehaviour
     }
 
     void Update(){
+        if(StageManager.instance.isGameEnd)return;
         #if UNITY_ANDROID && !UNITY_EDITOR
-        if(!isPaused){ //silhouette and Touch
+        if(!isPaused){
             if(CameraManager.instance.cam!=null && CharacterManager.instance!=null){
                 if(Input.GetButtonDown("hit1")){
                     joystickDirection=CameraManager.instance.cam.ScreenToWorldPoint((Input.mousePosition))-CharacterManager.instance.FindPlayer();
                     joystickDirection.z=0;
-                    /*
-                    if(joystickDirection.magnitude>dashDistance){
-                        joystickDirection=Vector3.Normalize(joystickDirection);
-                    }else{
-                        joystickDirection/=dashDistance;
-                    }
-                    */
                     joystickDirection/=dashDistance;
                     NoteManager.instance.JudgeNote(joystickDirection);
                 }
             }
         }
         #else
-        if(!isPaused){ //silhouette and Touch
+        if(!isPaused){
             if(CameraManager.instance.cam!=null && CharacterManager.instance!=null){
                 joystickDirection=CameraManager.instance.cam.ScreenToWorldPoint((Input.mousePosition))-CharacterManager.instance.FindPlayer();
 		        joystickDirection.z=0;
-                /*
-                if(joystickDirection.magnitude>dashDistance){
-                    joystickDirection=Vector3.Normalize(joystickDirection);
-                }else{
-                    joystickDirection/=dashDistance;
-                }
-                */
                 joystickDirection/=dashDistance;
                 CharacterManager.instance.SetSilhouettePos(joystickDirection);
             }
@@ -164,23 +134,6 @@ public class InGame : MonoBehaviour
         }
         #endif
     }
-
-    public void UpdateHealthSlider(float amount){
-        healthSlider.maxValue=StageManager.instance.stagefile.playerHealth;
-        StartCoroutine(Updating(amount));
-    }
-
-    public IEnumerator Updating(float amount){
-        Vector3 tp=Vector3.zero;
-        for(float i=0;i<=1;i+=0.1f){
-            healthSlider.value=Mathf.Lerp(healthSlider.value,amount,i);
-            tp.z=-1*Mathf.Lerp((100-healthSlider.value)*3.6f,(100-amount)*3.6f,i);
-            min.transform.rotation=Quaternion.Euler(tp);
-            yield return null;
-        }
-        healthSlider.value=amount;
-    }
-
     public void UpdateCombo(float amount){
         comboStringBuilder.Remove(0, 4);
         string temp =amount.ToString();

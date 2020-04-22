@@ -29,6 +29,7 @@ public class CountManager : MonoBehaviour
     [HideInInspector]public int hit;
     [HideInInspector]public bool stageCleared;
     [HideInInspector]public float rate;
+    private GameObject healthBar;
 
 
     public void Init(){
@@ -42,6 +43,7 @@ public class CountManager : MonoBehaviour
         miss=0;
         hit=0;
         stageCleared=true;
+        healthBar=CameraManager.instance.camAction.healthBar.gameObject;
         StageManager.instance.ingameUI.UpdateCombo(combo);
         StageManager.instance.ingameUI.UpdateScore(score);
     }
@@ -103,7 +105,21 @@ public class CountManager : MonoBehaviour
     public void StopScoreCount(){
         StopAllCoroutines();
     }
-
+    public void UpdateHealthSlider(float amount){
+        StartCoroutine(UpdateHealthBar(amount));
+    }
+    public IEnumerator UpdateHealthBar(float amount){
+        Vector3 tp=Vector3.one;
+        healthBar.transform.localScale=Vector3.one;
+        tp.y=Mathf.Lerp(0,1,amount/(float)StageManager.instance.stagefile.playerHealth);
+        for(float i=0;i<=1;i+=0.1f){
+            healthBar.transform.localScale=Vector3.Lerp(
+            healthBar.transform.localScale,tp,i);
+            yield return null;
+        }
+        healthBar.transform.localScale=tp;
+    }
+    //
     public void EndCount(){
         if(combo>maxCombo){
             maxCombo=combo;

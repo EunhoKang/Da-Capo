@@ -48,7 +48,7 @@ MonoBehaviour:
   BPM: 164
   runTime: 189
   metronomeRate: 0.0625
-  offset: 0.07
+  offset: 0.06
   backgroundIllust: {fileID: 21300000, guid: 51dec35780291d64badb47afee779e62, type: 3}
   noteFile: {fileID: 4900000, guid: 8dcd8cba3d6ba4c4eb85e2cdda07219d, type: 3}
   lyrics: {fileID: 4900000, guid: 1d15a95e814124642b72d9d6e02c22f0, type: 3}

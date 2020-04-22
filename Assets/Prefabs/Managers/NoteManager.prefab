@@ -48,7 +48,7 @@ MonoBehaviour:
   rayStartPoint: {fileID: 0}
   rate: 0
   lineScript: {fileID: 0}
-  noteSpeedMultiplier: 3
+  noteSpeedMultiplier: 5
   judgeDistance: 5
   linePrefab: {fileID: 2153484333783660785, guid: 33909bbd9d4e6d043b3afd5bc6017c6a,
     type: 3}
