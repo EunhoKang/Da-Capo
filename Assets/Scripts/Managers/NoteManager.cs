@@ -18,7 +18,6 @@ public class NoteManager : MonoBehaviour
     [HideInInspector]public Transform noteSpawnTransform;
     [HideInInspector]public Transform rayStartPoint;
     [HideInInspector]public float rate;
-    [HideInInspector]public Line lineScript;
     public float noteSpeedMultiplier;
     public float judgeDistance;
     public GameObject linePrefab;
@@ -44,7 +43,6 @@ public class NoteManager : MonoBehaviour
         noteDelay=Vector3.Magnitude(heartTransform.position-noteSpawnTransform.position)/Vector3.Magnitude(noteSpeed);
         line=Instantiate(linePrefab,heartTransform.position,Quaternion.identity);
         line.transform.SetParent(CameraManager.instance.cam.transform);
-        lineScript=line.GetComponent<Line>();
         StageManager.instance.SetStartDelay(noteDelay+0.01f);
         Notes=new List<Note>();
         for(int i=0;i<8;i++){
@@ -105,7 +103,7 @@ public class NoteManager : MonoBehaviour
     }
 
     public void JudgeSend(int judge){
-        lineScript.NoteHitted(judge);
+        CharacterManager.instance.NoteHitted(judge);
         if(judge<3){
             if(isNoteSFXOn){
                 SoundManager.instance.SFXPlay(touchSound,2);

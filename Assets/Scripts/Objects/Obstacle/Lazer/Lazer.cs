@@ -58,8 +58,8 @@ public class Lazer : MonoBehaviour
         isLooming=false;
         StartCoroutine(Appearing());
     }
-    Vector3 ff=new Vector3(28f,0.13f,0);
-    Vector3 ss=new Vector3(-28f,0.13f,0);
+    Vector3 ff=new Vector3(23f,0,0);
+    Vector3 ss=new Vector3(-23f,0,0);
     IEnumerator Appearing(){
         snake.gameObject.SetActive(true);
         float spb=StageManager.instance.spb;

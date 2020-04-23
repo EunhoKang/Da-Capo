@@ -45,4 +45,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 179793262354212277, guid: 8188d933840a36b4298cf318be312b64,
     type: 3}
-  playerHealth: 100
+  initialSpeed: 1.5
+  standardSpb: 0.5
+  noteHitPrefab:
+  - {fileID: 7884368420195397963, guid: abc43ca287d474e478c2813a7ee8b980, type: 3}
+  - {fileID: 7884368420195397963, guid: f7ccae6156bbd984ba534b9b1009d2d7, type: 3}
+  silhouettePos: {x: 0, y: 0, z: 0}
+  rate: 0
+  lastPos: {x: 0, y: 0, z: 0}
+  dashDistance: 0
