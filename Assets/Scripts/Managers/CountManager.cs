@@ -110,16 +110,16 @@ public class CountManager : MonoBehaviour
     }
     public IEnumerator UpdateHealthBar(float amount){
         Vector3 tp=Vector3.one;
+        Vector3 now=healthBar.transform.localScale;
         healthBar.transform.localScale=Vector3.one;
         tp.y=Mathf.Lerp(0,1,amount/(float)StageManager.instance.stagefile.playerHealth);
-        for(float i=0;i<=1;i+=0.1f){
-            healthBar.transform.localScale=Vector3.Lerp(
-            healthBar.transform.localScale,tp,i);
+        for(float i=0.1f;i<=1;i+=0.1f){
+            healthBar.transform.localScale=Vector3.Lerp(now,tp,i);
             yield return null;
         }
         healthBar.transform.localScale=tp;
     }
-    //
+    
     public void EndCount(){
         if(combo>maxCombo){
             maxCombo=combo;

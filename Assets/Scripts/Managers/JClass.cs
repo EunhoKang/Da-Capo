@@ -39,7 +39,7 @@ public class JClass
 			BGMvolume=1;
 			SFXvolume=1;
 			isVibOn=false;
-			offset=0.10f;
+			offset=0.16f;
             stages=new List<Stage>();
             prologues=new List<bool>();
             for(int i=0;i<11;i++){

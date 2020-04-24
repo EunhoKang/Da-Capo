@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Lazer : MonoBehaviour
 {
+    static float pi=Mathf.PI;
     public SpriteRenderer anim;
-    public List<Sprite> warn;
+    public Sprite warn;
     [Range(0.0625f,3f)]
     public float duration=0.25f;
     [Range(0.125f,2f)]
@@ -19,6 +20,9 @@ public class Lazer : MonoBehaviour
         col.enabled=false;
         snake.damage=StageManager.instance.stagefile.obstacleDamage;
         snake.gameObject.SetActive(false);
+        Color c=anim.color;
+        c.a=1;
+        anim.color=c;
     }
     public void OnDisable(){
         StopAllCoroutines();
@@ -35,20 +39,32 @@ public class Lazer : MonoBehaviour
         float rate=EnemyManager.instance.rate;
         int maxTick=(int)(warnTime/rate);
         float maxTickReverse=1f/maxTick;
-        int currentNum=0;
         int fixTm=(int)(EnemyManager.instance.fixTime/EnemyManager.instance.rate);
-        anim.sprite=warn[0];
         isLooming=true;
+        float delta=0;
+        float targetDelta=0;
+        float currentMt=1;
+        Color c=anim.color;
+        c.a=1;
+        anim.color=c;
+        float first=1;
+        float second=1;
         while(isLooming){
+            c=anim.color;
+            c.a=Mathf.Lerp(first,second,(delta*targetDelta)*(TimeManager.instance.multiplier*currentMt));
+            anim.color=c;
             if(TimeManager.instance.checkpoint>current){
                 while(TimeManager.instance.checkpoint>current){
                     current++;
                 }
-                currentNum=(int)((current-initial)*1f)%warn.Count;
-                if(currentNum>warn.Count-1){
-                    currentNum=warn.Count-1;
-                }
-                anim.sprite=warn[currentNum];
+                delta=0;
+                currentMt=1/(TimeManager.instance.multiplier);
+                targetDelta=1/(rate*spb*currentMt);
+                first=(Mathf.Cos(2*pi*(current-initial)*maxTickReverse)+1)*0.5f;
+                second=(Mathf.Cos(2*pi*(current-initial+1)*maxTickReverse)+1)*0.5f;
+                c=anim.color;
+                c.a=first;
+                anim.color=c;
             }
             yield return null;
         }

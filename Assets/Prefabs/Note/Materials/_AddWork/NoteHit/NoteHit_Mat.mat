@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NoteHit_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 1bdaebd1b2ada66448ab4c564a02b75e,
+  m_Shader: {fileID: -6465566751694194690, guid: c785f07a306e8a74288a586362d6097a,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -21,13 +21,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ee3afb19ba37a03408a40c3021715ced, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_3DBA2726: 0.05
     - Vector1_4799BA57: 0.4
     - Vector1_EFA049C2: 0.15
-    - _Fade: 0
+    - _Fade: 1.1
     - _Scale: 40
-    m_Colors: []
+    m_Colors:
+    - Color_542A2972: {r: 0.234, g: 0.4642766, b: 1, a: 1}

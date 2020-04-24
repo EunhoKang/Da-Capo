@@ -16,26 +16,6 @@ public class CameraMove : MonoBehaviour
     public Transform heartTransform;
     public Transform noteSpawnTransform;
     public Transform rayStartPoint;
-
-    public IEnumerator CameraShake(float horizontalMagnitude, float verticalMagnitude,int timerCount){
-        Vector3 originalPos = transform.localPosition;
-        int current=TimeManager.instance.checkpoint;
-        int initial=current;
-        while(current<timerCount+initial){
-            Vector3 targetCenter=Vector3.zero;
-            if(TimeManager.instance.checkpoint>current){
-                while(TimeManager.instance.checkpoint>current){
-                    current++;
-                }
-                float x = originalPos.x + Random.Range(-1f,1f) * horizontalMagnitude;
-                float y = originalPos.y + Random.Range(-1f,1f) * verticalMagnitude;
-                //fix this func before use this!
-            }
-            rb.MovePosition(Vector3.Lerp(transform.position,targetCenter,Time.deltaTime*2));
-            yield return null;
-        }
-        transform.localPosition = originalPos;
-    }
     public IEnumerator MoveCameraToDirectionSmoothlyCoroutine(Vector3 target, float waitTime,float duration){
         while(!StageManager.instance.isGameStart){
             yield return null;

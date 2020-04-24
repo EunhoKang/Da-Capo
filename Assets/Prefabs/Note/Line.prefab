@@ -44,12 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6d6e79fb7580443a92add35cb71f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 2
-  standardSpb: 0.5
-  noteHitPrefab:
-  - {fileID: 9173619499016955492, guid: bd730bfb0a8532b4588a25e2cc0e718e, type: 3}
-  - {fileID: 9173619499016955492, guid: a362594adea345748b876040edd63d0e, type: 3}
-  - {fileID: 9173619499016955492, guid: d789bef0957f5d74ca8b6c4ba459b498, type: 3}
   rayPoint: {fileID: 2153484334509474053}
 --- !u!1 &2153484334509474053
 GameObject:
@@ -119,5 +113,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9816924}
+  m_Size: {x: 10, y: 0.9816924}
   m_EdgeRadius: 0

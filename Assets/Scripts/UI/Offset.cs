@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Offset : MonoBehaviour
 {
-    private float offset=0.1f;
+    private float offset=0.16f;
     public Text offsetText;
     public void OnEnable(){
         JClass jClass=DataManager.instance._data;

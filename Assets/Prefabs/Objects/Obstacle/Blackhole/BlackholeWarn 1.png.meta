@@ -65,6 +65,9 @@ TextureImporter:
   - first:
       213: 6611323516988554228
     second: BlackholeWarn 1_9
+  - first:
+      213: -156552022653826110
+    second: BlackholeWarn 1_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -182,7 +185,7 @@ TextureImporter:
         width: 498
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,12 +201,12 @@ TextureImporter:
       name: BlackholeWarn 1_1
       rect:
         serializedVersion: 2
-        x: 541
+        x: 538
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,12 +222,12 @@ TextureImporter:
       name: BlackholeWarn 1_2
       rect:
         serializedVersion: 2
-        x: 1081
+        x: 1079
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,12 +243,12 @@ TextureImporter:
       name: BlackholeWarn 1_3
       rect:
         serializedVersion: 2
-        x: 1621
+        x: 1620
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,12 +264,12 @@ TextureImporter:
       name: BlackholeWarn 1_4
       rect:
         serializedVersion: 2
-        x: 2162
+        x: 2161
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,12 +285,12 @@ TextureImporter:
       name: BlackholeWarn 1_5
       rect:
         serializedVersion: 2
-        x: 2704
+        x: 2701
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,12 +306,12 @@ TextureImporter:
       name: BlackholeWarn 1_6
       rect:
         serializedVersion: 2
-        x: 3245
+        x: 3242
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,12 +327,12 @@ TextureImporter:
       name: BlackholeWarn 1_7
       rect:
         serializedVersion: 2
-        x: 3786
+        x: 3784
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,12 +348,12 @@ TextureImporter:
       name: BlackholeWarn 1_8
       rect:
         serializedVersion: 2
-        x: 4326
+        x: 4324
         y: 0
-        width: 498
+        width: 500
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -371,7 +374,7 @@ TextureImporter:
         width: 498
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

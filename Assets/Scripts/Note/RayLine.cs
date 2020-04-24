@@ -7,7 +7,7 @@ public class RayLine : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.layer==LayerMask.NameToLayer("Note")){
-            other.gameObject.SetActive(false);
+            other.GetComponent<Note>().NoteHitted(3);
             NoteManager.instance.JudgeSend(3);
         }
     }

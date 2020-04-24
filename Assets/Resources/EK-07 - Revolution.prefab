@@ -71,4 +71,4 @@ MonoBehaviour:
   usingObstacle:
   - {fileID: 5228032732328438283, guid: d77836db6ebaf3b4899c0baa163205be, type: 3}
   - {fileID: 4826501396896828211, guid: 09a240d5695c77c4490b012d0292cf68, type: 3}
-  - {fileID: 5053338942616365945, guid: 45c188b1c7d1b7e49825f3290d7ca501, type: 3}
+  - {fileID: 5053338942616365945, guid: f94a20aed1d510a47ab6583c0baeff5b, type: 3}

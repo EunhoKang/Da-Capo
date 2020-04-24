@@ -22,10 +22,7 @@ public class NoteManager : MonoBehaviour
     public float judgeDistance;
     public GameObject linePrefab;
     public Note notePrefab;
-    [Header("Setting")]
-    public bool isVibrateOn=false;
-    public bool isNoteSFXOn=false;
-    public AudioClip touchSound;
+    [HideInInspector]public bool isVibrateOn=false;
 
     private GameObject line;
     private float noteDelay;
@@ -90,14 +87,17 @@ public class NoteManager : MonoBehaviour
             float diff=(hit2D[0].collider.transform.position.y-heartTransform.position.y)*missDistanceReverse;
                 if(diff>-0.4f && diff<=0.4f){
                     JudgeSend(0);
+                    hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(0);
                 }else if(diff>-0.6f && diff<=0.6f){
                     JudgeSend(1);
+                    hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(1);
                 }else if(diff>-0.8f && diff<0.8f){
                     JudgeSend(2);
+                    hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(2);
                 }else{
                     JudgeSend(3);
+                    hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(3);
                 }
-                hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted();
                 CharacterManager.instance.MoveOrder(direction);
         }
     }
@@ -105,12 +105,9 @@ public class NoteManager : MonoBehaviour
     public void JudgeSend(int judge){
         CharacterManager.instance.NoteHitted(judge);
         if(judge<3){
-            if(isNoteSFXOn){
-                SoundManager.instance.SFXPlay(touchSound,2);
-            }
             #if UNITY_ANDROID && !UNITY_EDITOR
             if(isVibrateOn){
-                Vibration.Vibrate(60);
+                Vibration.Vibrate(40);
             }
             #endif
         }

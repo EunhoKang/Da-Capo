@@ -71,10 +71,6 @@ public class CameraManager : MonoBehaviour
         StartCoroutine(camAction.SpinCameraVerySmoothly(waitTime,duration,maxSpinSpeed,isClockwise==1 ? true : false));
     }
 
-    public void ShakeCamera(float horizontalMagnitude, float verticalMagnitude,int timerCount=8){
-        StartCoroutine(camAction.CameraShake(horizontalMagnitude,verticalMagnitude,timerCount));
-    }
-
     public void EndCamera(){
         StopAllCoroutines();
         Destroy(camAction.gameObject);
