@@ -46,7 +46,7 @@ MonoBehaviour:
   stageNum: 2
   songFile: {fileID: 8300000, guid: 3c9b6063ba686434097943ffda12012d, type: 3}
   BPM: 108
-  runTime: 177
+  runTime: 175.2
   metronomeRate: 0.0625
   offset: 0.06
   backgroundIllust: {fileID: 21300000, guid: ecdfa3a246a88844386759e364f34588, type: 3}

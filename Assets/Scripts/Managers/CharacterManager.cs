@@ -113,6 +113,9 @@ public class CharacterManager : MonoBehaviour
 		return obj;
 	}
 	IEnumerator NoteHitEffect(int judge,ParticleSystem p){
+		while(playerScript.isImmuneByMove){
+			yield return null;
+		}
         int current=TimeManager.instance.checkpoint;
         int initial=current;
         float spb=StageManager.instance.spb;

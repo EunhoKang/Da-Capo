@@ -15,11 +15,12 @@ public class Player : MonoBehaviour
     public SpriteRenderer sr;
     public GameObject min;
     public GameObject hour;
+    public AudioClip hitted;
     [HideInInspector]public float rate;
     private float health;
     private WaitForSeconds tptime;
     private Rigidbody2D rb;
-    private bool isImmuneByMove;
+    [HideInInspector]public bool isImmuneByMove;
     private bool isImmuneByHit;
     private float minInitRotation;
     private float hourInitRotation;
@@ -129,6 +130,8 @@ public class Player : MonoBehaviour
 	}
     public void PlayerDamaged(float damage){
         if(isImmuneByMove || isImmuneByHit) return;
+        //SoundManager.instance.SFXPlay(hitted,2);
+        BackgroundManager.instance.GetHitted();
         hitParticle.Play();
         health-=damage;
         StartImmune();

@@ -60,8 +60,8 @@ public class Lazer : MonoBehaviour
                 delta=0;
                 currentMt=1/(TimeManager.instance.multiplier);
                 targetDelta=1/(rate*spb*currentMt);
-                first=(Mathf.Cos(2*pi*(current-initial)*maxTickReverse)+1)*0.5f;
-                second=(Mathf.Cos(2*pi*(current-initial+1)*maxTickReverse)+1)*0.5f;
+                first=(Mathf.Cos(2*pi*(current-initial)*maxTickReverse)+1)*0.4f+0.2f;
+                second=(Mathf.Cos(2*pi*(current-initial+1)*maxTickReverse)+1)*0.4f+0.2f;
                 c=anim.color;
                 c.a=first;
                 anim.color=c;

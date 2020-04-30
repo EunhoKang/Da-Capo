@@ -52,39 +52,33 @@ public class Note : MonoBehaviour
         col.enabled=false;
         StopCoroutine(fallCoroutine);
         StartCoroutine(NoteHitEffect());
-        if(judge<=1){
-            StartCoroutine(NoteHitParticle());
+        if(judge<3){
+            StartCoroutine(NoteHitParticle(judge));
         }
     }
-    
-    IEnumerator NoteHitParticle(){
+    IEnumerator NoteHitParticle(int judge){
         int current=TimeManager.instance.checkpoint;
         int initial=current;
         float spb=StageManager.instance.spb;
         float particleSpeedMultiplier=standardSpb/spb;
 
-        for(int i=0;i<particles.Length;i++){
-            particles[i].Stop();
-            particles[i].gameObject.SetActive(true);
-            particles[i].playbackSpeed=initialSpeed*particleSpeedMultiplier*TimeManager.instance.multiplier;
-            particles[i].Play();
+        for(int i=0;i<4;i++){
+            particles[judge*4+i].Stop();
+            particles[judge*4+i].playbackSpeed=initialSpeed*particleSpeedMultiplier*TimeManager.instance.multiplier;
+            particles[judge*4+i].Play();
         }
         while(particles[0].isPlaying){
             if(TimeManager.instance.checkpoint>current){
                 while(TimeManager.instance.checkpoint>current){
                     current++;
                 }
-                for(int i=0;i<particles.Length;i++){
-                    particles[i].Pause();
-                    particles[i].playbackSpeed=initialSpeed*particleSpeedMultiplier*TimeManager.instance.multiplier;
-                    particles[i].Play();
+                for(int i=0;i<4;i++){
+                    particles[judge*4+i].Pause();
+                    particles[judge*4+i].playbackSpeed=initialSpeed*particleSpeedMultiplier*TimeManager.instance.multiplier;
+                    particles[judge*4+i].Play();
                 }
             }
             yield return null;
-        }
-        for(int i=0;i<particles.Length;i++){
-            particles[i].Stop();
-            particles[i].gameObject.SetActive(false);
         }
     }
 

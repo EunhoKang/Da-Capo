@@ -46,7 +46,7 @@ public class JClass
                 prologues.Add(false);
             }
             for(int i=0;i<stageCount;i++){
-                if(i==0 || i==1){
+                if(i==0){
                     stages.Add(new Stage(true,true));
                 }else{
                     stages.Add(new Stage(true,false));

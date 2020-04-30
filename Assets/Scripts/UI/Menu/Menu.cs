@@ -12,7 +12,8 @@ public class Menu : MonoBehaviour
     public StagePage stages;
     public Letter letterPage;
     public AudioClip bgm;
-    public Image bg;
+    public Image[] bg;
+    public GameObject[] buttons;
     private bool isChanging;
     public void OnEnable()
     {
@@ -26,6 +27,7 @@ public class Menu : MonoBehaviour
             SoundManager.instance.BGMStop();
         }
     }
+
     public void BGPerClear(){
         float persent=1f;
         JClass temp=DataManager.instance._data;
@@ -41,9 +43,11 @@ public class Menu : MonoBehaviour
                 persent-=amount;
             }
         }
-        Color color=bg.color;
-        color.a=persent;
-        bg.color=color;
+        for(int i=0;i<bg.Length;i++){
+            Color color=bg[i].color;
+            color.a=persent;
+            bg[i].color=color;
+        }
     }
     public void ButtonPushed(bool isRight){
         if(isChanging || (isRight && pageNum>=maxPage) || (!isRight && pageNum<=0))return;
@@ -63,6 +67,14 @@ public class Menu : MonoBehaviour
             pageNum--;
             yield return new WaitForSeconds(0.25f);
             PageSet(pageNum+1,pageNum);
+        }
+        buttons[0].SetActive(true);
+        buttons[1].SetActive(true);
+        if(pageNum==0){
+            buttons[0].SetActive(false);
+        }
+        if(pageNum==maxPage){
+            buttons[1].SetActive(false);
         }
         yield return new WaitForSeconds(0.25f);
         isChanging=false;

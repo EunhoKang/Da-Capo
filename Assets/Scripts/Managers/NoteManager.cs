@@ -85,13 +85,13 @@ public class NoteManager : MonoBehaviour
         judgeDistance,(1<<LayerMask.NameToLayer("Note")));
         if(hit2D.Length!=0){
             float diff=(hit2D[0].collider.transform.position.y-heartTransform.position.y)*missDistanceReverse;
-                if(diff>-0.4f && diff<=0.4f){
+                if(diff>-0.3f && diff<=0.3f){
                     JudgeSend(0);
                     hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(0);
-                }else if(diff>-0.6f && diff<=0.6f){
+                }else if(diff>-0.5f && diff<=0.5f){
                     JudgeSend(1);
                     hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(1);
-                }else if(diff>-0.8f && diff<0.8f){
+                }else if(diff>-1f && diff<1f){
                     JudgeSend(2);
                     hit2D[0].collider.gameObject.GetComponent<Note>().NoteHitted(2);
                 }else{

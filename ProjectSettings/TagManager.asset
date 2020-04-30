@@ -53,12 +53,6 @@ TagManager:
   - name: Effect
     uniqueID: 900602483
     locked: 0
-  - name: Line
-    uniqueID: 1242101185
-    locked: 0
-  - name: Note
-    uniqueID: 2391167369
-    locked: 0
   - name: Obstacle
     uniqueID: 2091830177
     locked: 0
@@ -73,6 +67,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3928919031
+    locked: 0
+  - name: Line
+    uniqueID: 1242101185
+    locked: 0
+  - name: Note
+    uniqueID: 2391167369
     locked: 0
   - name: PlayerEffect
     uniqueID: 25013221

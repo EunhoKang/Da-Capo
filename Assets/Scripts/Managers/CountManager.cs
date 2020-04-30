@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CountManager : MonoBehaviour
 {
@@ -13,12 +14,8 @@ public class CountManager : MonoBehaviour
 		}
         DontDestroyOnLoad(this);
 	}
-    [Header("Positive")]
-    public int ultimateScore;
-    public int perfectScore;
-    public int goodScore;
-    [Header("Negative")]
-    public int hitScore;
+    public Color maxHealth;
+    public Color minHealth;
     [HideInInspector]public int combo;
     [HideInInspector]public int score;
     [HideInInspector]public int maxCombo;
@@ -29,7 +26,7 @@ public class CountManager : MonoBehaviour
     [HideInInspector]public int hit;
     [HideInInspector]public bool stageCleared;
     [HideInInspector]public float rate;
-    private GameObject healthBar;
+    private Image healthBar;
 
 
     public void Init(){
@@ -43,8 +40,7 @@ public class CountManager : MonoBehaviour
         miss=0;
         hit=0;
         stageCleared=true;
-        healthBar=CameraManager.instance.camAction.healthBar.gameObject;
-        StageManager.instance.ingameUI.UpdateCombo(combo);
+        healthBar=CameraManager.instance.camAction.healthBar;
         StageManager.instance.ingameUI.UpdateScore(score);
     }
 
@@ -115,9 +111,11 @@ public class CountManager : MonoBehaviour
         tp.y=Mathf.Lerp(0,1,amount/(float)StageManager.instance.stagefile.playerHealth);
         for(float i=0.1f;i<=1;i+=0.1f){
             healthBar.transform.localScale=Vector3.Lerp(now,tp,i);
+            healthBar.color=Color.Lerp(minHealth,maxHealth,healthBar.transform.localScale.y);
             yield return null;
         }
         healthBar.transform.localScale=tp;
+        healthBar.color=Color.Lerp(minHealth,maxHealth,healthBar.transform.localScale.y);
     }
     
     public void EndCount(){

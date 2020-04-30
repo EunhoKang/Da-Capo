@@ -24,7 +24,7 @@ public class Loading : MonoBehaviour
         current=0;
     }
     void Update(){
-        hour.transform.Rotate(0,0,-50*Time.deltaTime);
+        hour.transform.Rotate(0,0,-25*Time.deltaTime);
         min.transform.Rotate(0,0,-100*Time.deltaTime);
         c++;
         if(c>30){

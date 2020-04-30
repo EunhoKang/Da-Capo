@@ -43,5 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad06fbcf2d3e548ab2d6e8c84b2dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: {r: 0.12156863, g: 0.73333335, b: 1, a: 0.6862745}
+  minHealth: {r: 1, g: 0.22481808, b: 0.12156862, a: 0.6862745}
   combo: 0
   score: 0
+  maxCombo: 0
+  ultimate: 0
+  perfect: 0
+  good: 0
+  miss: 0
+  hit: 0
+  stageCleared: 0
+  rate: 0

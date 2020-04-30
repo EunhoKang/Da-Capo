@@ -95,9 +95,10 @@ public class SoundManager : MonoBehaviour
     }
     public IEnumerator FadeOutCoroutine(){
         float temp=initialBGMVolume;
-        for(int i=0;i<10;i++){
-            BGM.volume-=temp*0.1f;
+        for(float i=1f;i>=0f;i-=0.1f){
+            BGM.volume=temp*i;
             yield return new WaitForSeconds(0.05f);
         }
+        BGM.volume=0;
     }
 }

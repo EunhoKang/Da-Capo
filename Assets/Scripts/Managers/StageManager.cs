@@ -159,7 +159,11 @@ public class StageManager : MonoBehaviour
         Time.timeScale=1;
         ingameUI.FadeOut();
         ingameUI.CantPause();
-        yield return new WaitForSeconds(1.5f);
+        SoundManager.instance.BGMFadeOut();
+        yield return new WaitForSeconds(0.6f);
+        SoundManager.instance.SoundPause();
+        yield return new WaitForSeconds(0.5f);
+        SoundManager.instance.SoundPause();
         ingameUI.GameOver();
         StopAllCoroutines();
     }
