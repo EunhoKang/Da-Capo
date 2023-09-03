@@ -19,9 +19,7 @@ public abstract class enemy : MonoBehaviour
         rb=GetComponent<Rigidbody2D>();
         appearSprite.gameObject.SetActive(false);
     }
-    protected virtual void Update(){
-        //transform.rotation=CameraManager.instance.cam.transform.rotation;
-    }
+    protected virtual void Update(){}
     public IEnumerator PlayerLoom(){
         animationSprite.gameObject.SetActive(true);
         float spb=StageManager.instance.spb;

@@ -10,7 +10,7 @@ public class Loading : MonoBehaviour
     public GameObject hour;
     public GameObject min;
     private string[] strings={"LOADING.","LOADING..","LOADING..."};
-    private int c;
+    private float c;
     private int current;
     public void BlackOut(){
         StartCoroutine(Blacken());
@@ -26,7 +26,7 @@ public class Loading : MonoBehaviour
     void Update(){
         hour.transform.Rotate(0,0,-25*Time.deltaTime);
         min.transform.Rotate(0,0,-100*Time.deltaTime);
-        c++;
+        c += Time.deltaTime*100;
         if(c>30){
             c=0;
             current++;

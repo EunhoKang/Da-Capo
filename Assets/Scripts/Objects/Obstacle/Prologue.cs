@@ -88,7 +88,7 @@ public class Prologue : MonoBehaviour
             if(i>50){
                 i=0;
             }
-            yield return null;
+            yield return new WaitForSecondsRealtime(0.03f);
         }
     }
 
